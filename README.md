@@ -3,13 +3,13 @@
 There are a lot of different ways to handle this, but I think the simplest looks like adding a `.Renviron` file at the root of your project. This file will be loaded when Rstudio starts, and values contained in it can be accessed as follows:
 
 ```sh
-.Renviron
+# In your .Renviron
 
 apiKey="testKey"
 ```
 
 ```r
-# in your script.r
+# in your <scriptName>.r
 
 key <- Sys.getenv("apiKey")
 
